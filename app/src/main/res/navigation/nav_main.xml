@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/сategoriesFragment">
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.rickandmortywiki.ui.main.characters.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" />
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.example.rickandmortywiki.ui.main.episodes.EpisodesFragment"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.rickandmortywiki.ui.main.location.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/сategoriesFragment"
+        android:name="com.example.rickandmortywiki.ui.main.categories.СategoriesFragment"
+        android:label="СategoriesFragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_сategoriesFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+        <action
+            android:id="@+id/action_сategoriesFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+        <action
+            android:id="@+id/action_сategoriesFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+</navigation>
